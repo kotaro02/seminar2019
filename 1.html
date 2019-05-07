@@ -6,20 +6,26 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
 function button1Pressed(){
-    document.getElementById("result").innerHTML="hello,world";
+    var x =document.getElementById("tf1").value;
+    x=Number(x);
+    var y =document.getElementById("tf2").value;
+    y=Number(y);
+    var z=x+y;
+    document.getElementById("tf3").value=z;
+    
 }
     </script>
 </head>
 
 <body>
     <h1>XXXX</h1>
-    <input type="text">
+    <input id="tf1" type="text">
     <button onclick="button1Pressed()">+</button>
-    <input type="text">
+    <input id="tf2" type="text">
     =
-    <input type="text">
+    <input id="tf3" type="text">
     <hr>
-    <p id="yyyyy>XXXX</p>
+    <p id= "yyyyy">XXXX</p>
 </body>
 
 </html>
