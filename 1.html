@@ -7,7 +7,18 @@
     <script>
 function button1Pressed(){
     var random=Math.random();
-    document.getElementById("result").innerHTML=random;
+    //乱数を0~99の範囲にする
+    random=random*100;
+    random=Math.floor(random);
+    //おみくじの結果を決める
+    var result;
+    if(random>50){
+       result="大吉";}
+    
+    else{
+        result="凶";}
+        //結果を表示する
+    document.getElementById("yyyyy").innerHTML=result;
 }
     </script>
 </head>
@@ -17,7 +28,7 @@ function button1Pressed(){
     <button onclick="button1Pressed()">X</button>
     <button onclick="button2Pressed()">Y</button>
     <hr>
-    <p id="result">XXXX</p>
+    <p id="yyyyy">XXXX</p>
 </body>
 
 </html>
