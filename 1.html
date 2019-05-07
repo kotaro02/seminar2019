@@ -5,18 +5,46 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-function button1Pressed(){
-    document.getElementById("result").innerHTML="hello,world";
-}
+        function button1Pressed() {
+            var a = Number(document.getElementById("a").value);
+            var b = Number(document.getElementById("b").value);
+            var c = Number(document.getElementById("c").value);
+            var d = Number(document.getElementById("d").value);
+
+            var random1 = Math.random();
+            if (random1 > 0.5) {
+                document.getElementById("a").value = 0;
+            } else { document.getElementById("a").value = 1 }
+
+            var random2 = Math.random();
+            if (random2 > 0.5) {
+                document.getElementById("b").value = 0;
+            } else { document.getElementById("b").value = 1 }
+
+            var random3 = Math.random();
+            if (random3 > 0.5) {
+                document.getElementById("c").value = 0;
+            } else { document.getElementById("c").value = 1 }
+
+            var random4 = Math.random();
+            if (random4 > 0.5) {
+                document.getElementById("d").value = 0;
+            } else { document.getElementById("d").value = 1 }
+
+
+        }
     </script>
 </head>
 
 <body>
-    <h1>XXXX</h1>
-    <button onclick="button1Pressed()">A</button>
-    <button onclick="button2Pressed()">B</button>
+    <button onclick="button1Pressed()">生成！</button>
+    <input id="a" type="text">
+    <input id="b" type="text">
+    <input id="c" type="text">
+    <input id="d" type="text">
+    <button onclick="button2Pressed()">答え合わせ</button>
     <hr>
-    <p id="result">XXXX</p>
+    <p id="result"></p>
 </body>
 
 </html>
