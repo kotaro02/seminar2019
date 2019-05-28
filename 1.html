@@ -16,11 +16,17 @@
 
 <script>
     function x() {
+
+        var student = {
+            lname: '前田',
+            gender: '男',
+            age: 20,
+        };
         var text = "";
         text = "<ul>" + text;
-        for (var i = 0; i < 3; i++) {
-            text = text + "<li>" + (i + 1) + "</li>";
-        }
+        text = text + "<li>" + student.lname + "</li>";
+        text = text + "<li>" + student.gender + "</li>";
+        text = text + "<li>" + student.age + "</li>";
         text = text + "</ul>";
         document.getElementById("x").innerHTML = text;
 
