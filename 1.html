@@ -8,29 +8,57 @@
 </head>
 
 <body>
-    <button onclick="x()">A</button>
+    <button onclick="x()">投稿</button>
     <div id="x"></div>
     <hr>
     <p id="result"></p>
 </body>
 
 <script>
+
+    var tweetBox = [];
+
     function x() {
 
-        var student = {
-            lname: '前田',
-            gender: '男',
-            age: 20,
+        var aa = {
+            sid: 1,
+            tweet: 'こんにちは',
+            date: new Date()
         };
+        tweetBox.push(aa);
+
+        var bb = {
+            sid: 2,
+            tweet: 'halo',
+            date: new Date()
+        };
+        tweetBox.push(bb);
+
+        var cc = {
+            sid: 3,
+            tweet: 'あああああ',
+            date: new Date()
+        };
+        tweetBox.push(cc);
+
+
         var text = "";
-        text = "<ul>" + text;
-        text = text + "<li>" + student.lname + "</li>";
-        text = text + "<li>" + student.gender + "</li>";
-        text = text + "<li>" + student.age + "</li>";
-        text = text + "</ul>";
+        text = "<table>" + text;
+        text = text + '<th> ' + 'sid' + '</th>' + '<th>' + 'tweet' + '</th>' + '<th> ' + 'date' + '</th>';
+        console.log("a");
+        for (var i = 0; i < tweetBox.length; i++) {
+            text = text + '<tr>' + '<th>' + tweetBox[i].sid + '</th>' + '<th>' + tweetBox[i].tweet + '</th>' + '<th>' + tweetBox[i].date + '</th>' + '</tr>';
+        }
+
+        text = text + "</table>";
+
+
         document.getElementById("x").innerHTML = text;
 
     }
+
+
+
 
 </script>
 
