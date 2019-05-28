@@ -8,6 +8,9 @@
 </head>
 
 <body>
+
+    Student ID<input id='id'></input>
+    Tweet<input id='content'></input>
     <button onclick="x()">投稿</button>
     <div id="x"></div>
     <hr>
@@ -21,30 +24,15 @@
     function x() {
 
         var aa = {
-            sid: 1,
-            tweet: 'こんにちは',
+            sid: document.getElementById('id').value,
+            tweet: document.getElementById('content').value,
             date: new Date()
         };
         tweetBox.push(aa);
 
-        var bb = {
-            sid: 2,
-            tweet: 'halo',
-            date: new Date()
-        };
-        tweetBox.push(bb);
-
-        var cc = {
-            sid: 3,
-            tweet: 'あああああ',
-            date: new Date()
-        };
-        tweetBox.push(cc);
-
-
         var text = "";
-        text = "<table>" + text;
-        text = text + '<th> ' + 'sid' + '</th>' + '<th>' + 'tweet' + '</th>' + '<th> ' + 'date' + '</th>';
+        text = "<table border='1'>" + text;
+        text = text + '<th> ' + 'ID' + '</th>' + '<th>' + 'Tweet' + '</th>' + '<th> ' + 'Date' + '</th>';
         console.log("a");
         for (var i = 0; i < tweetBox.length; i++) {
             text = text + '<tr>' + '<th>' + tweetBox[i].sid + '</th>' + '<th>' + tweetBox[i].tweet + '</th>' + '<th>' + tweetBox[i].date + '</th>' + '</tr>';
