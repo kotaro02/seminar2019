@@ -19,6 +19,16 @@
 
             var objects = await connect(query);
             console.log(objects);
+
+
+            var text = "";
+            text = "<table border='1'>" + text;
+            text = text + '<th> ' + 'name' + '</th>' + '<th>' + 'time' + '</th>' + '<th> ' + 'tweet' + '</th>';
+            for (var i = 0; i < objects.length; i++) {
+                text = text + '<tr>' + '<th>' + objects[i].name + '</th>' + '<th>' + objects[i].tweet + '</th>' + '<th>' + objects[i].time + '</th>' + '</tr>';
+            }
+            text = text + "</table>";
+            document.getElementById("x").innerHTML = text;
         }
 
         function connect(query) {
@@ -41,6 +51,7 @@
     <button onclick="button1Pressed()">X</button>
     <hr>
     <p id="result">xxxx</p>
+    <div id="x"></div>
 </body>
 
 </html>
